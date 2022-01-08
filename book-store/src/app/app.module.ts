@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   // Components in this module.
@@ -10,7 +11,8 @@ import { AppComponent } from './app.component';
   ],
   // Imports modules it depends on
   imports: [
-    BrowserModule
+    BrowserModule,
+    AuthModule
   ],
   providers: [],
   // Entry point for module
