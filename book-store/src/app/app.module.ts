@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   // Components in this module.
@@ -12,7 +13,8 @@ import { AuthModule } from './auth/auth.module';
   // Imports modules it depends on
   imports: [
     BrowserModule,
-    AuthModule
+    AuthModule,
+    HomeModule
   ],
   providers: [],
   // Entry point for module
