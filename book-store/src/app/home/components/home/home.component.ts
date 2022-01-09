@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookModel } from 'src/app/book/models/book.model';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,9 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  books: BookModel[];
+
+  // Lifecycle hook
   ngOnInit(): void {
   }
 
