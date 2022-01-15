@@ -8,6 +8,7 @@ import { LoginComponent } from './auth/components/login/login.component';
 import { SignupComponent } from './auth/components/signup/signup.component';
 import { HomeComponent } from './home/components/home/home.component';
 import { HomeModule } from './home/home.module';
+import { SharedModule } from './shared/shared.module';
 
 // Step 1: Define Routes/Paths
 
@@ -27,6 +28,7 @@ const routes = [
   // Imports modules it depends on
   imports: [
     BrowserModule,
+    SharedModule,
     AuthModule,
     // Make module aware of routing paths.
     RouterModule.forRoot(routes),
