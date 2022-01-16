@@ -10,14 +10,17 @@ const mongoClient = mongodb.MongoClient;
 
 // Step 4: Connect to mongodb
 
+var dbClient;
+
 exports.connect = ()=>{
     mongoClient.connect(url)
     .then((client)=>{
+        dbClient = client;
         console.log("MongoDB is connected");
     })
     .catch(err=>{console.log(err)});
 } 
 
-// function connect(){
-//     mongoClient.connect(ur).then()
-// }
+exports.getCollection = (name)=>{
+    return dbClient.db('SLBookStore').getCollection(name);
+}
