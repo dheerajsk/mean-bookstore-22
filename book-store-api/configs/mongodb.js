@@ -22,5 +22,5 @@ exports.connect = ()=>{
 } 
 
 exports.getCollection = (name)=>{
-    return dbClient.db('SLBookStore').getCollection(name);
+    return dbClient.db('SLBookStore').collection(name);
 }

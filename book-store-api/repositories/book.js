@@ -7,6 +7,7 @@ exports.getAll = (cb)=>{
     const collection = db.getCollection('Book');
     collection.find().toArray()
         .then((books)=>{
+            // Calling callback funciton with books
             cb(books);
         })
         .catch(err=>{console.log(err)})
