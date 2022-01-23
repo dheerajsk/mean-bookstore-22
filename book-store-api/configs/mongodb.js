@@ -13,6 +13,7 @@ const mongoClient = mongodb.MongoClient;
 var dbClient;
 
 exports.connect = ()=>{
+    console.log("Connecting...")
     mongoClient.connect(url)
     .then((client)=>{
         dbClient = client;
